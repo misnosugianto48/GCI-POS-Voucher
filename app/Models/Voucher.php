@@ -15,4 +15,13 @@ class Voucher extends Model
     {
         return $this->belongsTo(Transaction::class);
     }
+
+    public function isUsable(): bool
+    {
+        if ($this->transaction_id !== null) {
+            return false;
+        }
+
+        return now()->lt($this->expired_at);
+    }
 }
