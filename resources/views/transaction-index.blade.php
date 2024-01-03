@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 mt-5">
                 <table class="table table-bordered table-hover table-striped">
-                    <h2>Vouchers</h2>
+                    <h2>Transaksi</h2>
                     <thead>
                         <tr>
                             <th>ID</th>

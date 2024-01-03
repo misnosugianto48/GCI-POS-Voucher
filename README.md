@@ -9,57 +9,33 @@
 
 ## Tentang Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Aturan Diskon dan Voucher
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Project Ini aplikasi web sederhana untuk menyelesaikan test GCI Intern yaitu membuat sebuah perhitungan voucher yang akan bisa dipakai apabila jumlah total mencapai atau lebih dari 2 juta dengan potongan harga menjadi 10 ribu.
 
 ## Design Database
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Database memiliki 3 table yaitu :
 
-## Contoh Isi
+- Staff
+- Transactions
+- Vouchers
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Dengan relasi table staff memiliki banyak transaction dan transaction memiliki 1 voucher.
 
-## Contributing
+## Contoh Demo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Berikut beberapa contoh aplikasi webnya saat dijalankan:
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Mengenerate voucher asumsinya kita sebagai staff, kita generate vocuher untuk expired dalam waktu 3 bulan.
+- ![Alt text](image-1.png)
+- Dibawah list dari voucher yang telah digenerate dan siap pakai dalam kurun 3 bulan kedepan.
+- ![Alt text](image-2.png)
+- Voucher dapat digunakan apabila total yang dihitung mencapai 2 juta atau lebih, dan jika tidak sampai maka vocuher tidak akan bisa dipakai.
+- ![Alt text](image-3.png)
+- ![Alt text](image-5.png)
+- Ketika berhasil dipakai maka jumlah yang harus dibayar akan berkurang sebanyak 10 ribu.
+- ![Alt text](image-4.png)
+- Dan saat mencetak faktur kode dan harga yang dipotong dari voucher akan tampil.
+- ![Alt text](image-6.png)
 
 ## License
 
