@@ -20,6 +20,7 @@ class TransactionFactory extends Factory
         return [
             'staff_id' => Staff::all()->random()->id,
             'total_amount' => $this->faker->numberBetween(1000000, 2000000),
+            'staff_id' => Staff::all()->random()->id,
         ];
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(TransactionController::class)->group(function () {
+    Route::get('/transaction', 'show');
+    Route::post('/transaction', 'store');
+    Route::get('/transactions-index', 'index');
+    Route::get('/transactions/{id}/print', 'printInvoice');
+});
+
+Route::controller(VoucherController::class)->group(function () {
+    Route::get('/vouchers', 'index');
+    Route::get('/voucher-index', 'show');
+    Route::post('/vouchers', 'store');
 });
