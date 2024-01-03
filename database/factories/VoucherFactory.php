@@ -20,7 +20,7 @@ class VoucherFactory extends Factory
     {
         $expiredAt = Carbon::now()->addMonths(3);
         return [
-            'code' => $this->faker->unique()->uuid,
+            'code' => $this->faker->unique(),
             'transaction_id' => Transaction::all()->random()->id,
             'expired_at' => $this->faker->dateTimeBetween(now(), $expiredAt),
         ];
