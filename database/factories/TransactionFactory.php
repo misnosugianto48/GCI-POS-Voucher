@@ -19,7 +19,7 @@ class TransactionFactory extends Factory
     {
         return [
             'staff_id' => Staff::all()->random()->id,
-            'total_amount' => fake()->numberBetween(1000, 2000000),
+            'total_amount' => $this->faker->numberBetween(1000000, 2000000),
         ];
     }
 }

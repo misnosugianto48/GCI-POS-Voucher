@@ -17,8 +17,8 @@ class StaffFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'nip' => fake()->numberBetween(1000, 10000),
+            'name' => $this->faker->name(),
+            'nip' => $this->faker->numberBetween(1000, 10000),
         ];
     }
 }
