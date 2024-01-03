@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Factories\TransactionFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,6 +22,8 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             StaffSeeder::class,
+            TransactionSeeder::class,
+            VoucherSeeder::class,
         ]);
     }
 }
